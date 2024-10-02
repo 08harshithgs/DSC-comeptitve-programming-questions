@@ -1,0 +1,15 @@
+def carton(bottles):
+    cartonsize = {"XL": 48,"Large": 24,"Medium": 12,"Small": 6}
+    cartoncount = {size: 0 for size in cartonsize}
+    if bottles <= cartonsize["Small"]:
+        print("1 x Small carton(s)")
+    for size, capacity in cartonsize.items():
+        if bottles >= capacity:
+            cartoncount[size] = bottles // capacity 
+            bottles %= capacity
+    print("Carton breakdown:")
+    for size in cartonsize.keys():
+        if cartoncount[size] > 0:
+            print(f"{cartoncount[size]} x {size} carton(s)")
+bottles2=3
+carton(bottles2)
