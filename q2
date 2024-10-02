@@ -5,5 +5,5 @@ def removedup(arr1):
             arr2.append(element)
     print(arr2)
     
-arr1 = [2,3,4,4,6,7,7]
+arr1 = [1,2,2,1,5,4,3,5,6,4]
 arr3 = removedup(arr1)
