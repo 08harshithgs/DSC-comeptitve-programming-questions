@@ -1,0 +1,21 @@
+def date_month(dayno, year):
+    def is_leapyear(year):
+        if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+            return True
+        return False
+    days = [31,28,31,30,31,30,31,31,30,31,30,31]
+    if is_leapyear(year):
+        days[1] = 29  
+    month = 0
+    while dayno > days[month]:
+        dayno -= days[month]
+        month += 1
+        
+    months = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November","December"]
+    date = f"{dayno} {months[month]} {year}"
+    return date
+
+
+dayno = 45
+year = 2025
+print(date_month(dayno, year))
