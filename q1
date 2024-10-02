@@ -1,0 +1,8 @@
+def acswords(string):
+    words = string.split()
+    words2 = sorted(words,key=len)
+    words3 = ' '.join(words2)
+    print(words3)
+
+string = str(input('enter the sentence that needs to be sorted: '))
+strung2 = acswords(string)
