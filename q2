@@ -1,0 +1,9 @@
+def removedup(arr1):
+    arr2 = []
+    for element in arr1:
+        if not arr2 or arr2[-1] != element:
+            arr2.append(element)
+    print(arr2)
+    
+arr1 = [2,3,4,4,6,7,7]
+arr3 = removedup(arr1)
