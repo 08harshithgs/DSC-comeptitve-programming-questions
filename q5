@@ -1,0 +1,16 @@
+class stackarr:
+    def intp(arr):
+        arr.stack = []
+    
+    def push(arr, val):
+        arr.stack.append(val)
+    
+    def pop(arr):
+        if not arr.is_empty():
+            return arr.stack.pop()
+        print("empty stack")
+    
+    def peek(arr):
+        if not arr.is_empty():
+            return arr.stack[-1]
+        print("empty stack")
