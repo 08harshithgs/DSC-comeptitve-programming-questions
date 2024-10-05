@@ -10,6 +10,6 @@ def carton(bottles):
     print("Carton breakdown:")
     for size in cartonsize.keys():
         if cartoncount[size] > 0:
-            print(f"{cartoncount[size]} x {size} carton(s)")
+            print(f"{cartoncount[size]} x {size}")
 bottles2=3
 carton(bottles2)
